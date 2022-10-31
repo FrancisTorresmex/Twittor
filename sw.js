@@ -7,7 +7,7 @@ const INMUTABLE_CACHE_NAME = 'inmutable-v1';
 
 //cosas necesariar a guardar en cache para el arranque o funcionamiento de la app
 const App_shell = [
-    '/',
+    //'/',
     'index.html',
     '/css/style.css',
     'img/favicon.ico',

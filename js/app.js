@@ -1,7 +1,17 @@
+//ver si estoy en desarrollo o producccion (github pages)
+var url = window.location.href; //obtiene todo el url actual
+
+//https://francistorresmex.github.io/Twittor/
+var serverWorkerLocation = '/Twittor/sw.js'; //url produccion
 
 //Registrar e instalar service worker
 if (navigator.serviceWorker) {
-    navigator.serviceWorker.register('/sw.js');
+
+    if (url.includes('localhost')) {
+        serverWorkerLocation = '/sw.js';
+    }
+    //si es produccion
+    navigator.serviceWorker.register(serverWorkerLocation);
 }
 
 
